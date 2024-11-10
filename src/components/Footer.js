@@ -25,6 +25,7 @@ export default function Footer() {
   <div>
     <div>
       <img src="/group-men-women-standing-different-poses-vector-illustration 1.png" />
+ 
       <div className="flex justify-center space-x-4 mt-24">
             <a href="#" className="text-white hover:text-gray-400">
               <FaFacebookF size={24} />

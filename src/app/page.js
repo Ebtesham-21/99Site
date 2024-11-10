@@ -1,11 +1,13 @@
 import Footer from '../components/Footer';
+import CustomerReviewSlider from "../components/CustomerReviewSlider";
 
 export default function Home() {
   return (
     <div>
-      <main>
+    
         {/* Main content of the page */}
-      </main>
+        <CustomerReviewSlider/>
+    
       <Footer />
     </div>
   );
