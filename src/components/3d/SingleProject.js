@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { FaFacebookF, FaLinkedinIn, FaInstagram,  FaBehance, FaPlay } from 'react-icons/fa';
+import '@google/model-viewer';
 import { BsTwitterX } from "react-icons/bs";
 
 export default function ProjectPage() {
@@ -12,12 +13,15 @@ export default function ProjectPage() {
       {/* Main Image */}
       <section className="flex justify-center mt-6">
         <div className="bg-blue-500 w-full max-w-4xl h-96 rounded-lg flex items-center justify-center">
-          <Image
-            src="/teenage-girl.png" // Adjust the path based on your setup
-            alt="3D Project Image"
-            width={300}
-            height={300}
-          />
+        <model-viewer
+        src="/3dModel.glb"
+        alt="3D Model"
+        auto-rotate
+        camera-controls
+        style={{width: '100%', height:'300px'}}
+        >
+
+        </model-viewer>
         </div>
       </section>
 
@@ -48,21 +52,27 @@ export default function ProjectPage() {
         </p></div>
        
         <div className="grid grid-cols-2 gap-4 mt-6">
-          <div className="bg-gray-700 h-48 rounded-lg flex items-center justify-center">
-            <Image
-              src="/sketch.png" // Replace with the correct image path
-              alt="Placeholder Image 1"
-              width={150}
-              height={150}
-            />
+          <div className="bg-blue-500 h-48 rounded-lg flex items-center justify-center">
+          <model-viewer
+        src="/robotSketch.glb"
+        alt="3D Model"
+        auto-rotate
+        camera-controls
+        style={{width: '100%', height:'300px'}}
+        >
+
+        </model-viewer>
           </div>
           <div className="bg-blue-500 h-48 rounded-lg flex items-center justify-center">
-            <Image
-              src="/teenage-girl.png" // Replace with the correct image path
-              alt="Placeholder Image 2"
-              width={150}
-              height={150}
-            />
+          <model-viewer
+        src="/3dModel.glb"
+        alt="3D Model"
+        auto-rotate
+        camera-controls
+        style={{width: '100%', height:'200px'}}
+        >
+
+        </model-viewer>
           </div>
         
         </div>
