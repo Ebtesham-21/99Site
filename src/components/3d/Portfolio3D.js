@@ -24,7 +24,7 @@ const PortfolioSection = () => {
         style={{ top: `${scrollPosition * 0.5}px` }}
       >
         <img
-          src="/path/to/rocket.png" // Replace with the path to your rocket image
+          src="/rocket.png" // Replace with the path to your rocket image
           alt="Rocket"
           className="w-16"
         />
