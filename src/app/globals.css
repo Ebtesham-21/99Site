@@ -19,3 +19,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.text-stroke {
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+}

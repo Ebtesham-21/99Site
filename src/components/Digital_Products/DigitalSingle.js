@@ -16,10 +16,10 @@ const DigitalSingle = () => {
         
         <div className='bg-black text-white'>
          
-            <section className="text-center py-12 bg-[url('/Cover_1.png')] h-64 bg-cover bg-center bg-no-repeat">
-                <h2 className='text-lg text-gray-400'>Project Name</h2>
-                <h1 className='text-4xl font-bold'>ABC PROJECT</h1>
-                <p className='text-md text-gray-400'>Project No.1</p>
+            <section className="text-center py-12 bg-[url('/Cover_1.png')] h-80 bg-cover bg-center bg-no-repeat">
+                
+                <h1 className='text-5xl font-bold text-stroke'>ABC PROJECT</h1>
+                <p className='text-md '>Project No.1</p>
             </section>
 
             <section className='bg-gray-900 px-4 py-12 md:px-16 lg:px-32'>
