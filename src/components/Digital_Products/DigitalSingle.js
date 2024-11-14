@@ -2,13 +2,47 @@
 import React from 'react';
 import {
     TabDes,
-    TabHeader
+    TabHeader,
+    TabImage,
+    TabImageContainer,
+    TabItem,
+    TabList,
+    TabsProvider,
 
-} from '@/components/core/image-tabs';
+} from '../core/image-tabs';
+const tabs = [{
+    title:'How do UI components improve UX?',
+    id:'improve',
+    description:'UI components can improve UX by providing familiar, consistent interactions that make it easy for users to navigate and interact with an application.',
+    ImageUrl:'https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format',
+},
+{
+    title:'How do UI components improve UX?',
+    id:'improve',
+    description:'UI components can improve UX by providing familiar, consistent interactions that make it easy for users to navigate and interact with an application.',
+    imageUrl:'https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format',
+},
+{
+    title:'How do UI components improve UX?',
+    id:'improve',
+    description:'UI components can improve UX by providing familiar, consistent interactions that make it easy for users to navigate and interact with an application.',
+    imageUrl:'https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format',
+},
+{
+    title:'How do UI components improve UX?',
+    id:'improve',
+    description:'UI components can improve UX by providing familiar, consistent interactions that make it easy for users to navigate and interact with an application.',
+    imageUrl:'https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format',
+},
+];
 
 const DigitalSingle = () => {
+
+
     return (
+        
         <div className='bg-black text-white'>
+         
             <section className='text-center py-12'>
                 <h2 className='text-lg text-gray-400'>Project Name</h2>
                 <h1 className='text-4xl font-bold'>ABC PROJECT</h1>
@@ -55,6 +89,36 @@ const DigitalSingle = () => {
                  </p>
                 
             </section>
+            <div className='w-full h-full'>
+            <TabsProvider defaultValue="01" className="md:grid md:grid-cols-12">
+  <TabList className="md:col-span-5">
+    <TabItem value={'01'}>
+      <TabHeader value={'01'}>title01</TabHeader>
+      <TabDes value={'01'}>description</TabDes>
+    </TabItem>
+    <TabItem value={'02'}>
+      <TabHeader value={'02'}>title02</TabHeader>
+      <TabDes value={'02'}>description</TabDes>
+    </TabItem>
+    <TabItem value={'03'}>
+      <TabHeader value={'03'}>title03</TabHeader>
+      <TabDes value={'03'}>description</TabDes>
+    </TabItem>
+  </TabList>
+  <TabImageContainer className="md:col-span-7">
+    <TabImage value={'01'}>
+      <img src={''} alt={''} />
+    </TabImage>
+    <TabImage value={'02'}>
+      <img src={''} alt={''} />
+    </TabImage>
+    <TabImage value={'03'}>
+      <img src={''} alt={''} />
+    </TabImage>
+  </TabImageContainer>
+</TabsProvider>;
+
+            </div>
 
             <section className="bg-gray-900 px-4 py-12 md:px-16 lg:px-32 text-center">
   <h2 className="text-3xl font-bold">Get A Project In Mind?</h2>
