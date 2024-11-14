@@ -1,4 +1,10 @@
+"use client";
 import React from 'react';
+import {
+    TabDes,
+    TabHeader
+
+} from '@/components/core/image-tabs';
 
 const DigitalSingle = () => {
     return (
@@ -62,7 +68,7 @@ const DigitalSingle = () => {
     <a href="#" className='text-red-500'>Previous Project</a>
     <a href="#" className='text-red-500'>Next Project</a>
     </section>
-        </div>
+</div>
     );
 };
 
