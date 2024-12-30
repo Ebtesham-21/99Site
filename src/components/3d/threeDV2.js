@@ -90,7 +90,7 @@ const threeDV2 = () => {
 
         <div className='flex mt-20 items-center justify-center'>
             <div className='grid grid-cols-1 sm:grid-cols-4 gap-6'>
-                {videos.map((video, index) => (
+                {filteredVideos.map((video, index) => (
                     <div key={index} className='flex flex-col items-center'>
                         {/* { Video thumbnail and play button } */}
                         <div 
