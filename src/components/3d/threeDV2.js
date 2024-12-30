@@ -60,10 +60,10 @@ const threeDV2 = () => {
                 </div>
             </div>
         </div>
-        <div className='flex mt-20  items-center justify-center bg-white-100 '>
+        <div className='flex mt-2  items-center justify-center bg-white-100 '>
             <div
             className='bg-white p-6 rounded-lg w-4/5'>
-            <div className='flex justify-between'>
+            <div className='flex justify-center gap-40'>
                 <button onClick={() => setFilter("All")} className='px-4 py-2 text-black font-semibold rounded-md'>
                     All
                 </button>
@@ -79,9 +79,7 @@ const threeDV2 = () => {
                 <button className='px-4 py-2 text-black font-semibold rounded-md'>
                    
                 </button>
-                <button className='px-4 py-2 text-black font-semibold rounded-md'>
-                   
-                </button>
+               
             </div>
 
 
