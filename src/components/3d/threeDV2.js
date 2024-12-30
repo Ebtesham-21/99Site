@@ -11,10 +11,18 @@ const threeDV2 = () => {
     {title:"Eid", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
     {title:"Award", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
     {title:" Independence Day", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
+    {title:"siblings2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
+    {title:"Eid2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
+    {title:"Award2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
+    {title:" Independence Day2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
+    {title:"siblings3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
+    {title:"Eid3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
+    {title:"Award3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
+    {title:" Independence Day3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
   ];
 
   const openModal = (videoUrl) => {
-    setActiveVideo(videoUrl);
+    setActiveVideo(`${videoUrl}?autoplay=1`);
     setIsModalOpen(true);
   };
 
@@ -77,22 +85,63 @@ const threeDV2 = () => {
             </div>
         </div>
 
-        <div className='flex items-center justify-center'>
+        <div className='flex mt-20 items-center justify-center'>
             <div className='grid grid-cols-1 sm:grid-cols-4 gap-6'>
-                {videos.map((video, index) => {
+                {videos.map((video, index) => (
                     <div key={index} className='flex flex-col items-center'>
                         {/* { Video thumbnail and play button } */}
                         <div 
-                        className='relative group w-64 h-40 bg-cover bg-center rounded-lg overflow-hidden cursor-pointer'
+                        className='relative group w-64 h-80 bg-cover bg-center rounded-lg overflow-hidden cursor-pointer'
                         style={{backgroundImage: `url(${video.thumbnail})`}}
                         onClick={() => openModal(video.videoUrl)}
                         >
+                            <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group:hover:opacity-100 transition'>
+                                <button className='w-12 h-12 bg-white rounded-full flex items-center justify-center '>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth={2}
+                                    stroke="currentColor"
+                                    className="w-6 h-6 text-red-500"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-4.586 2.61A1 1 0 019 12.61V8.39a1 1 0 011.166-.97l4.586 2.61a1 1 0 010 1.737z" />
+                                </svg>
+                                </button>
+                            </div>
+                          
+
 
                         
                         </div>
+                    <p className='mt-2 text-center text-lg font-semibold'>{video.title}</p>
                     </div>
-                })}
+
+                ))}
             </div>
+            {/* {Modal} */}
+            {isModalOpen && (
+                <div className='fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50'>
+                    <div className='bg-white rounded-lg overflow-hidden shadow-lg w-11/12 md:w=2/3 lg:w-1/2'>
+                        <div className='relative pb-[56.25%]'>
+                        <iframe
+                            src={activeVideo}
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="absolute inset-0 w-full h-full"
+                        ></iframe>  
+                        </div>
+                        <button 
+                        onClick={closeModal}
+                        className='absolute top-4 right-4 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center'>
+                        &times;
+                        </button>
+
+                    </div>
+                </div>
+            )}
 
 
         </div>
