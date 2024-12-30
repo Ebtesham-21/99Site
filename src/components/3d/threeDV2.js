@@ -35,9 +35,9 @@ const threeDV2 = () => {
 
 
   return (
-    <div className='bg-gray-100'>
+    <div className="bg-[url('/fixed-bg.jpg')] bg-cover bg-center bg-no-repeat">
         <div className='flex items-center justify-center '>
-            <div className='flex flex-col md:flex-row items-center md:items-center gap-6 w-4/5   '>
+            <div className='flex flex-col md:flex-row items-center md:items-center gap-6 w-4/5  p-10  '>
                 <div className='flex-1 bg-white p-6'>
                     <h1 className='text-3xl font-bold text-gray-800 mb-4'>
                     Portfolio 
