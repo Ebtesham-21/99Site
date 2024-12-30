@@ -5,6 +5,7 @@ import CustomerReviewSlider from "../components/CustomerReviewSlider";
 import SingleProject from "../components/3d/SingleProject";
 import Portfolio3D from "../components/3d/Portfolio3D";
 import DigitalSingle from "../components/Digital_Products/DigitalSingle";
+import ThreeDV2 from "../components/3d/threeDV2";
 import HorizontalScroll from "../components/HorizontalScroll";
 
 export default function Home() {
@@ -20,7 +21,8 @@ export default function Home() {
         {/* <SingleProject/> */}
         {/* <Footer /> */}
         {/* <Footer2 /> */}
-        <DigitalSingle/>
+        {/* <DigitalSingle/> */}
+        <ThreeDV2/>
         
 
 
