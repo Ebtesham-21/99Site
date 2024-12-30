@@ -5,20 +5,21 @@ import React, {useState} from 'react';
 const threeDV2 = () => {
   const[isModalOpen, setIsModalOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState("");
+  const [filter, setFilter] = useState("All");
 
   const videos = [
-    {title:"siblings", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:"Eid", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:"Award", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:" Independence Day", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:"siblings2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:"Eid2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:"Award2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:" Independence Day2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:"siblings3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:"Eid3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:"Award3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
-    {title:" Independence Day3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" },
+    {title:"siblings", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8", category: "2D" },
+    {title:"Eid", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8", category: "2D" },
+    {title:"Award", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8", category: "2D" },
+    {title:" Independence Day", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8", category: "2D" },
+    {title:"siblings2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8", category: "3D" },
+    {title:"Eid2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8", category: "3D" },
+    {title:"Award2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8", category: "3D" },
+    {title:" Independence Day2", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8", category: "3D" },
+    {title:"siblings3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8",category: "Explainer Video" },
+    {title:"Eid3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8" ,category: "Explainer Video"},
+    {title:"Award3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8",category: "Explainer Video" },
+    {title:" Independence Day3", thumbnail:"/thumb.jpg", videoUrl:"https://www.youtube.com/embed/vxiAzUMl71w?si=PGAA6XEZkoIIFUb8",category: "Explainer Video" },
   ];
 
   const openModal = (videoUrl) => {
@@ -31,6 +32,8 @@ const threeDV2 = () => {
     setActiveVideo("");
     setIsModalOpen(false);
   }
+
+  const filteredVideos = filter === "All" ? videos: videos.filter(video => video.category === filter);
 
 
 
@@ -61,16 +64,16 @@ const threeDV2 = () => {
             <div
             className='bg-white p-6 rounded-lg w-4/5'>
             <div className='flex justify-between'>
-                <button className='px-4 py-2 text-black font-semibold rounded-md'>
+                <button onClick={() => setFilter("All")} className='px-4 py-2 text-black font-semibold rounded-md'>
                     All
                 </button>
-                <button className='px-4 py-2 text-black font-semibold rounded-md'>
+                <button onClick={() => setFilter("2D")} className='px-4 py-2 text-black font-semibold rounded-md'>
                     2D
                 </button>
-                <button className='px-4 py-2 text-black font-semibold rounded-md'>
+                <button onClick={() => setFilter("3D")}  className='px-4 py-2 text-black font-semibold rounded-md'>
                    3D
                 </button>
-                <button className='px-4 py-2 text-black font-semibold rounded-md'>
+                <button onClick={() => setFilter("Explainer Video")} className='px-4 py-2 text-black font-semibold rounded-md'>
                     Explainer Video
                 </button>
                 <button className='px-4 py-2 text-black font-semibold rounded-md'>
@@ -114,7 +117,7 @@ const threeDV2 = () => {
 
                         
                         </div>
-                    <p className='mt-2 text-center text-lg font-semibold'>{video.title}</p>
+                    <p className='mt-2 bg-white p-4 rounded-lg text-center text-lg font-semibold'>{video.title}</p>
                     </div>
 
                 ))}
