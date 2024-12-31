@@ -41,39 +41,39 @@ const threeDV2 = () => {
     <div className="bg-[url('/fixed-bg.jpg')] bg-cover bg-center bg-no-repeat">
         <div className='flex items-center justify-center '>
             <div className='flex flex-col md:flex-row items-center md:items-center gap-6 w-4/5  p-10  '>
-                <div className='flex-1 bg-white p-6'>
-                    <h1 className='text-5xl font-extrabold text-gray-800 mb-4'>
+                <div className='flex-1  p-6 rounded-lg' style={{ backgroundColor: '#B72025' }}>
+                    <h1 className='text-6xl font-extrabold text-[#FED701] mb-4'>
                     Portfolio 
                     </h1>
-                    <p className='text-gray-600 text-2xl'>
+                    <p className='text-white text-3xl'>
                          We have worked on award-winning animations for some of the most prestigious animation studios in the global industry. Some of our shows have even received Daytime Emmy Award Nominations! Check out some of our best work and our latest projects below.
                     </p>
                 </div>
                 <div className='flex-1'>
                     <img
-                    src="./portfolio-page-banner-image.png"
+                    src="./ful_family-removebg-preview.png"
                     alt="portfolio-page-banner-image"
                    
-                    className="w-full h-full "
+                    className="w-full h-full"
                     />
 
                 </div>
             </div>
         </div>
-        <div className='flex mt-2  items-center justify-center bg-white-100 '>
+        <div className='flex mt-2  items-center justify-center  '>
             <div
-            className='bg-white p-6 rounded-lg w-4/5'>
+            className=' p-6 rounded-lg w-4/5' style={{ backgroundColor: '#B72025' }}>
             <div className='flex justify-center gap-40'>
-                <button onClick={() => setFilter("All")} className='px-4 py-2 text-black font-semibold rounded-md'>
+                <button onClick={() => setFilter("All")} className='px-4 py-2 text-white font-semibold rounded-md'>
                     All
                 </button>
-                <button onClick={() => setFilter("2D")} className='px-4 py-2 text-black font-semibold rounded-md'>
+                <button onClick={() => setFilter("2D")} className='px-4 py-2 text-white font-semibold rounded-md'>
                     2D
                 </button>
-                <button onClick={() => setFilter("3D")}  className='px-4 py-2 text-black font-semibold rounded-md'>
+                <button onClick={() => setFilter("3D")}  className='px-4 py-2 text-white font-semibold rounded-md'>
                    3D
                 </button>
-                <button onClick={() => setFilter("Explainer Video")} className='px-4 py-2 text-black font-semibold rounded-md'>
+                <button onClick={() => setFilter("Explainer Video")} className='px-4 py-2 text-white font-semibold rounded-md'>
                     Explainer Video
                 </button>
                 <button className='px-4 py-2 text-black font-semibold rounded-md'>
