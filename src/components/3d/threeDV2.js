@@ -41,9 +41,9 @@ const threeDV2 = () => {
     <div className="bg-[url('/fixed-bg.jpg')] bg-cover bg-center bg-no-repeat">
         <div className='flex items-center justify-center '>
             <div className='flex flex-col md:flex-row items-center md:items-center gap-6 w-4/5  p-10  '>
-                <div className='flex-1  p-6 rounded-lg' style={{ backgroundColor: '#B72025' }}>
+                <div className='flex-1  p-6 rounded-lg' style={{ backgroundColor: '#564ab1' }}>
                     <h1 className='text-6xl font-extrabold text-[#FED701] mb-4'>
-                    Portfolio 
+                    PORTFOLIO
                     </h1>
                     <p className='text-white text-3xl'>
                          We have worked on award-winning animations for some of the most prestigious animation studios in the global industry. Some of our shows have even received Daytime Emmy Award Nominations! Check out some of our best work and our latest projects below.
@@ -62,7 +62,7 @@ const threeDV2 = () => {
         </div>
         <div className='flex mt-2  items-center justify-center  '>
             <div
-            className=' p-6 rounded-lg w-4/5' style={{ backgroundColor: '#B72025' }}>
+            className=' p-6 rounded-lg w-4/5' style={{ backgroundColor: '#564ab1' }}>
             <div className='flex justify-center gap-40'>
                 <button onClick={() => setFilter("All")} className='px-4 py-2 text-white font-semibold rounded-md'>
                     All
@@ -115,7 +115,7 @@ const threeDV2 = () => {
 
                         
                         </div>
-                    <p className='mt-2 bg-white p-4 rounded-lg text-center text-lg font-semibold'>{video.title}</p>
+                    <p className='m-4  p-4 rounded-lg text-center text-white text-lg font-semibold' style={{ backgroundColor: '#564ab1' }}>{video.title}</p>
                     </div>
 
                 ))}
