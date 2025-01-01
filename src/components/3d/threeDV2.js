@@ -62,8 +62,8 @@ const threeDV2 = () => {
         </div>
         <div className='flex mt-2  items-center justify-center  '>
             <div
-            className=' p-6 rounded-lg w-4/5' style={{ backgroundColor: '#564ab1' }}>
-            <div className='flex justify-center gap-40'>
+            className=" p-6 rounded-lg w-4/5' bg-[#564ab1]">
+            <div className='flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-40'>
                 <button onClick={() => setFilter("All")} className='px-4 py-2 text-white font-semibold rounded-md'>
                     All
                 </button>
