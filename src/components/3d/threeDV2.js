@@ -38,14 +38,14 @@ const threeDV2 = () => {
 
 
   return (
-    <div className="bg-[url('/fixed-bg.jpg')] bg-cover bg-center bg-no-repeat">
+    <div className="bg-[url('/2b.png')] bg-cover bg-fixed bg-center bg-no-repeat">
         <div className='flex items-center justify-center '>
-            <div className='flex flex-col md:flex-row items-center md:items-center gap-6 w-4/5  p-10  '>
+            <div className='flex flex-col md:flex-row items-center gap-6 w-full md:w-4/5 p-6 md:p-10'>
                 <div className='flex-1  p-6 rounded-lg' style={{ backgroundColor: '#564ab1' }}>
-                    <h1 className='text-6xl font-extrabold text-[#FED701] mb-4'>
+                    <h1 className='text-4xl md:text-6xl font-extrabold text-[#FED701] mb-4 text-center md:text-left'>
                     PORTFOLIO
                     </h1>
-                    <p className='text-white text-3xl'>
+                    <p className='text-white text-lg md:text-3xl text-center md:text-left'>
                          We have worked on award-winning animations for some of the most prestigious animation studios in the global industry. Some of our shows have even received Daytime Emmy Award Nominations! Check out some of our best work and our latest projects below.
                     </p>
                 </div>
@@ -54,7 +54,7 @@ const threeDV2 = () => {
                     src="./ful_family-removebg-preview.png"
                     alt="portfolio-page-banner-image"
                    
-                    className="w-full h-full"
+                    className="w-full h-auto sm:max-w-sm md:max-w-full mx-auto"
                     />
 
                 </div>
@@ -62,18 +62,18 @@ const threeDV2 = () => {
         </div>
         <div className='flex mt-2  items-center justify-center  '>
             <div
-            className=" p-6 rounded-lg w-4/5' bg-[#564ab1]">
+            className=" p-6 rounded-lg w-4/5' bg-[#564ab1] ">
             <div className='flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-40'>
-                <button onClick={() => setFilter("All")} className='px-4 py-2 text-white font-semibold rounded-md'>
+                <button onClick={() => setFilter("All")} className='px-4 py-2 text-white font-semibold rounded-md border border-white hover:bg-white hover:text-black transition duration-300' >
                     All
                 </button>
-                <button onClick={() => setFilter("2D")} className='px-4 py-2 text-white font-semibold rounded-md'>
+                <button onClick={() => setFilter("2D")} className='px-4 py-2 text-white font-semibold rounded-md border border-white hover:bg-white hover:text-black transition duration-300' >
                     2D
                 </button>
-                <button onClick={() => setFilter("3D")}  className='px-4 py-2 text-white font-semibold rounded-md'>
+                <button onClick={() => setFilter("3D")}  className='px-4 py-2 text-white font-semibold rounded-md border border-white hover:bg-white hover:text-black transition duration-300' >
                    3D
                 </button>
-                <button onClick={() => setFilter("Explainer Video")} className='px-4 py-2 text-white font-semibold rounded-md'>
+                <button onClick={() => setFilter("Explainer Video")} className='px-4 py-2 text-white font-semibold rounded-md border border-white hover:bg-white hover:text-black transition duration-300' >
                     Explainer Video
                 </button>
                 <button className='px-4 py-2 text-black font-semibold rounded-md'>
@@ -115,7 +115,7 @@ const threeDV2 = () => {
 
                         
                         </div>
-                    <p className='m-4  p-4 rounded-lg text-center text-white text-lg font-semibold' style={{ backgroundColor: '#564ab1' }}>{video.title}</p>
+                    <p className='m-4  p-4 text-white font-semibold rounded-md border border-white hover:bg-white hover:text-[#FED701] transition duration-300' style={{ backgroundColor: '#564ab1' }}>{video.title}</p>
                     </div>
 
                 ))}
