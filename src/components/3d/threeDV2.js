@@ -54,7 +54,7 @@ const threeDV2 = () => {
                     src="./ful_family-removebg-preview.png"
                     alt="portfolio-page-banner-image"
                    
-                    className="w-full h-auto sm:max-w-sm md:max-w-full mx-auto"
+                    className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto"
                     />
 
                 </div>
