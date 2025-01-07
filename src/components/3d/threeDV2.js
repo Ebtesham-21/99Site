@@ -51,7 +51,7 @@ const threeDV2 = () => {
                 </div>
                 <div className='flex-1'>
                     <img
-                    src="./ful_family-removebg-preview.png"
+                    src="./ful_family-removebg-preview.png" 
                     alt="portfolio-page-banner-image"
                    
                     className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto"
@@ -63,7 +63,7 @@ const threeDV2 = () => {
         <div className='flex mt-2  items-center justify-center  '>
             <div
             className=" p-6 rounded-lg w-4/5' bg-[#564ab1] ">
-            <div className='flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-40'>
+            <div className='flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-60'>
                 <button onClick={() => setFilter("All")} className='px-4 py-2 text-white font-semibold rounded-md border border-white hover:bg-white hover:text-black transition duration-300' >
                     All
                 </button>
@@ -76,9 +76,7 @@ const threeDV2 = () => {
                 <button onClick={() => setFilter("Explainer Video")} className='px-4 py-2 text-white font-semibold rounded-md border border-white hover:bg-white hover:text-black transition duration-300' >
                     Explainer Video
                 </button>
-                <button className='px-4 py-2 text-black font-semibold rounded-md'>
-                   
-                </button>
+            
                
             </div>
 
